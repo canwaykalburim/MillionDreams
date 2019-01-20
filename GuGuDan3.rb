@@ -1,1 +1,1 @@
-2.upto(9){|i| 1.upto(9){|j| puts "#{i} X #{j} = #{i * j}"}}
+2.upto(9) {|i| 1.upto(9) {|j| puts "#{i} X #{j} = #{i * j}"}}
