@@ -1,0 +1,1 @@
+cat is cat.but cat is not dog.
