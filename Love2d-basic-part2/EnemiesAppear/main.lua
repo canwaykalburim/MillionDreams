@@ -9,12 +9,14 @@ function love.load()
   player.x = 0
   player.y = 480
   player.bullets = {}
-  player.cooldown = 10
+  player.cooldown = 20
   player.speed = 2
   player.image = love.graphics.newImage('image/player_3cm.png')
+  player.fire_sound = love.audio.newSource('bgm/LaserGunSoundEffect.wav', 'static')
   player.fire = function()
     if player.cooldown <= 0 then
-      player.cooldown = 10
+      love.audio.play(player.fire_sound)
+      player.cooldown = 20
       bullet = {}
       bullet.x = player.x + 38.5
       bullet.y = player.y - 5
@@ -30,14 +32,14 @@ function enemies_controller:spawnEnemy(x, y)
   enemy.x = x
   enemy.y = y
   enemy.bullets = {}
-  enemy.cooldown = 10
+  enemy.cooldown = 20
   enemy.speed = 1
   table.insert(self.enemies, enemy)
 end
 
 function enemy:fire()
   if self.cooldown <= 0 then
-    self.cooldown = 10
+    self.cooldown = 20
     bullet = {}
     bullet.x = self.x + 10
     bullet.y = self.y
