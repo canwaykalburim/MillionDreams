@@ -34,18 +34,18 @@ function love.load()
     end
   end
   enemies_controller:spawnEnemy(0, 0)
-  enemies_controller:spawnEnemy(150, 0)
+  enemies_controller:spawnEnemy(300, 0)
 end
 
 function enemies_controller:spawnEnemy(x, y)
   enemy = {}
   enemy.x = x
   enemy.y = y
-  enemy.width = 75
-  enemy.height = 75
+  enemy.width = 170
+  enemy.height = 150
   enemy.bullets = {}
   enemy.cooldown = 20
-  enemy.speed = 2
+  enemy.speed = 0
   table.insert(self.enemies, enemy)
 end
 

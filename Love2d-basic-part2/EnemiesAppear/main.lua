@@ -24,7 +24,7 @@ function love.load()
     end
   end
   enemies_controller:spawnEnemy(0, 0)
-  enemies_controller:spawnEnemy(20, 0)
+  enemies_controller:spawnEnemy(200, 0)
 end
 
 function enemies_controller:spawnEnemy(x, y)
